@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 class Main {
 
-  // Create the public class while preventing any issues related with the file.
+  // Create the public class while preventing any issues with the file.
   public static void main(String[] args) throws FileNotFoundException {
 
     // Create a scanner.
