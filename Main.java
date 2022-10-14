@@ -4,20 +4,21 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 class Main {
-  
+
+  // Create the public class while preventing any issues related with the file.
   public static void main(String[] args) throws FileNotFoundException {
 
     // Create a scanner.
     Scanner Scanner = new Scanner(System.in);
 
-    // Create an arry list, file reader and a new scanner.
+    // Create an arry list, a file reader to read the "names.txt" file and a new scanner.
     ArrayList<String> arrayList = new ArrayList<>();
     FileReader fr = new FileReader ("names.txt");
     Scanner fileScanner = new Scanner(fr);
 
-    // Set the scanner so it return the input that was skipped.
+    // Get the input from user including any input that might have been skipped.
     while(fileScanner.hasNextLine()){
-      arrayList.add(fileScanner.nextLine());
+    arrayList.add(fileScanner.nextLine());
       
     }
 
@@ -50,9 +51,12 @@ class Main {
         for(String s : arrayList) {
           System.out.println(s);
         }
-      }
-
+      }  
+      
       // To quit the program prevent the number from being equal to five.
     }while(input != 5);
-  }
+
+    // Close the scanner.
+    Scanner.close();
+  } 
 }
